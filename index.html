@@ -34,9 +34,21 @@
       padding: 20px;
       text-align: center;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      position: relative;
+      overflow: hidden;
     }
     .service-card img {
-      max-width: 100px;
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 15px;
+    }
+    /* Imagen de fondo en lugar de <img> */
+    .service-card.bg-transporte-interurbano {
+      background-image: url('images/transporte_interurbano.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 200px; /* Ajusta la altura según lo necesites */
+      border-radius: 10px;
       margin-bottom: 15px;
     }
     .service-card h3 {
@@ -69,8 +81,7 @@
     <h2>Nuestros Servicios</h2>
     <div class="services-grid">
       
-      <div class="service-card">
-        <img src="images/transporte_interurbano.jpg" alt="Transporte Interurbano">
+      <div class="service-card bg-transporte-interurbano">
         <h3>Transporte Interurbano</h3>
         <p>Viaja con comodidad y seguridad entre ciudades. Horarios flexibles y tarifas accesibles.</p>
         <a href="#">Reserva Ahora</a>
