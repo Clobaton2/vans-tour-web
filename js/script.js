@@ -9,3 +9,5 @@ function showNextSlide() {
 }
 
 setInterval(showNextSlide, 5000);  // Cambia la imagen cada 5 segundos
+
+
