@@ -5,42 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sección de Servicios</title>
   <style>
-/* Estilos para el botón flotante de WhatsApp */
-.whatsapp-button {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #25d366;
-  border-radius: 50%;
-  padding: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
-}
-.whatsapp-button img {
-  width: 50px;
-  height: 50px;
-}
-.whatsapp-button:hover {
-  background-color: #128c7e;
-}
-
-
-
-    
+    /* Estilos generales */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
       background-color: #f5f5f5;
     }
+    h2 {
+      color: #004aad;
+    }
+
+    /* Sección de servicios */
     .services-section {
       text-align: center;
       padding: 50px 20px;
       background-color: #ffffff;
-    }
-    .services-section h2 {
-      color: #004aad;
-      margin-bottom: 30px;
     }
     .services-grid {
       display: grid;
@@ -49,6 +29,7 @@
       max-width: 1200px;
       margin: 0 auto;
     }
+
     .service-card {
       background-color: #f9f9f9;
       border: 1px solid #e0e0e0;
@@ -57,90 +38,127 @@
       text-align: center;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       position: relative;
-      overflow: hidden;
     }
     .service-card img {
       max-width: 100%;
       height: auto;
       margin-bottom: 15px;
     }
-    /* Imagen de fondo en lugar de <img> */
-    .service-card.bg-transporte-interurbano {
-      background-image: url('images/transporte_interurbano.jpg');
+    /* Botón de WhatsApp */
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      border-radius: 50%;
+      padding: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+    }
+    .whatsapp-button img {
+      width: 50px;
+      height: 50px;
+    }
+    .whatsapp-button:hover {
+      background-color: #128c7e;
+    }
+
+    /* Sección de inicio (Banner principal) */
+    .hero-section {
+      background-image: url('https://via.placeholder.com/1200x500'); /* Cambia la imagen aquí */
       background-size: cover;
       background-position: center;
-      height: 200px; /* Ajusta la altura según lo necesites */
-      border-radius: 10px;
-      margin-bottom: 15px;
+      color: white;
+      padding: 100px 20px;
+      text-align: center;
     }
-    .service-card h3 {
-      color: #333;
-      margin-bottom: 10px;
-    }
-    .service-card p {
-      color: #666;
-      font-size: 14px;
+    .hero-section h1 {
+      font-size: 50px;
       margin-bottom: 20px;
     }
-    .service-card a {
-      display: inline-block;
-      text-decoration: none;
-      color: #ffffff;
+    .hero-section p {
+      font-size: 20px;
+    }
+    /* Sección de contacto */
+    .contact-section {
       background-color: #004aad;
+      color: white;
+      padding: 50px 20px;
+      text-align: center;
+    }
+    .contact-section h2 {
+      margin-bottom: 30px;
+    }
+    .contact-section form input, .contact-section form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+    }
+    .contact-section form button {
+      background-color: #ff5a5f;
+      color: white;
       padding: 10px 20px;
       border-radius: 5px;
-      font-size: 14px;
-      transition: background-color 0.3s ease;
+      border: none;
+      cursor: pointer;
     }
-    .service-card a:hover {
-      background-color: #0073e6;
+    .contact-section form button:hover {
+      background-color: #e04a4e;
     }
   </style>
 </head>
 <body>
 
-  <section class="services-section">
+  <!-- Sección Hero (Banner principal) -->
+  <section class="hero-section">
+    <h1>Bienvenido a Nuestro Servicio</h1>
+    <p>Viaja de manera cómoda y segura con nuestros servicios de transporte.</p>
+    <a href="#services-section" style="color: white; text-decoration: underline;">Descubre nuestros servicios</a>
+  </section>
+
+  <!-- Sección de Servicios -->
+  <section id="services-section" class="services-section">
     <h2>Nuestros Servicios</h2>
     <div class="services-grid">
-      
-      <div class="service-card bg-transporte-interurbano">
+      <div class="service-card">
+        <img src="images/transporte_interurbano.jpg" alt="Transporte Interurbano">
         <h3>Transporte Interurbano</h3>
         <p>Viaja con comodidad y seguridad entre ciudades. Horarios flexibles y tarifas accesibles.</p>
         <a href="#">Reserva Ahora</a>
       </div>
-
       <div class="service-card">
         <img src="https://via.placeholder.com/100" alt="Tours Guiados">
         <h3>Tours Guiados</h3>
         <p>Explora los mejores destinos turísticos con guías expertos y paquetes personalizados.</p>
         <a href="#">Reserva Ahora</a>
       </div>
-
       <div class="service-card">
         <img src="https://via.placeholder.com/100" alt="Transporte de Paquetería">
         <h3>Transporte de Paquetería</h3>
         <p>Envía tus paquetes de forma rápida y segura con entregas puntuales.</p>
         <a href="#">Reserva Ahora</a>
       </div>
-
-      <div class="service-card">
-        <img src="https://via.placeholder.com/100" alt="Transporte Urbano">
-        <h3>Transporte Urbano</h3>
-        <p>Realiza tus traslados dentro de la ciudad con conductores profesionales.</p>
-        <a href="#">Reserva Ahora</a>
-      </div>
-
     </div>
   </section>
 
-  
-<!-- Botón flotante de WhatsApp -->
-<a href="https://wa.me/1234567890" target="_blank" class="whatsapp-button">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
-</a>
+  <!-- Sección de Contacto -->
+  <section id="contact-section" class="contact-section">
+    <h2>Contacto</h2>
+    <p>Si tienes alguna duda o deseas más información, contáctanos</p>
+    <form action="#">
+      <input type="text" placeholder="Tu nombre" required>
+      <input type="email" placeholder="Tu email" required>
+      <textarea placeholder="Tu mensaje" required></textarea>
+      <button type="submit">Enviar Mensaje</button>
+    </form>
+  </section>
 
+  <!-- Botón flotante de WhatsApp -->
+  <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-button">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+  </a>
 
-
-  
 </body>
 </html>
