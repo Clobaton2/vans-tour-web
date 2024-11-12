@@ -1,143 +1,125 @@
-/* Estilo general */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f5f5f5;
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicio de Transporte</title>
+  <link rel="stylesheet" href="style.css"> <!-- Enlace a un archivo CSS externo -->
+  <script src="script.js" defer></script> <!-- Enlace a un archivo JS externo -->
+</head>
+<body>
 
-/* Barra de navegación */
-header {
-  background-color: #004aad;
-  padding: 10px 0;
-}
-header nav ul {
-  list-style: none;
-  text-align: center;
-}
-header nav ul li {
-  display: inline-block;
-  margin: 0 20px;
-}
-header nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-}
+  <!-- Barra de navegación -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Inicio</a></li>
+        <li><a href="#services">Servicios</a></li>
+        <li><a href="#reservations">Reservas</a></li>
+        <li><a href="#testimonials">Testimonios</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
 
-/* Sección Hero (Slider) */
-.hero-section {
-  position: relative;
-  height: 500px;
-  overflow: hidden;
-  background-color: #333;
-  color: white;
-}
-.slider {
-  display: flex;
-  transition: transform 0.5s ease;
-}
-.slide {
-  min-width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 30px;
-}
+  <!-- Sección de Inicio (Slider de imágenes) -->
+  <section id="home" class="hero-section">
+    <div class="slider">
+      <div class="slide" style="background-image: url('image1.jpg');">
+        <h1>Bienvenido a Nuestro Servicio</h1>
+        <p>Viaja cómodo y seguro con nuestros servicios de transporte interurbano.</p>
+      </div>
+      <div class="slide" style="background-image: url('image2.jpg');">
+        <h1>Explora Nuevos Destinos</h1>
+        <p>Descubre nuevas rutas y ciudades con nuestros tours guiados.</p>
+      </div>
+      <div class="slide" style="background-image: url('image3.jpg');">
+        <h1>Transporte Seguro</h1>
+        <p>Entrega de paquetes rápida y confiable.</p>
+      </div>
+    </div>
+  </section>
 
-/* Sección de Servicios */
-.services-section {
-  text-align: center;
-  padding: 50px 20px;
-  background-color: #ffffff;
-}
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-.service-card {
-  background-color: #f9f9f9;
-  padding: 20px;
-  text-align: center;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
+  <!-- Sección de Servicios -->
+  <section id="services" class="services-section">
+    <h2>Nuestros Servicios</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="images/transporte_interurbano.jpg" alt="Transporte Interurbano">
+        <h3>Transporte Interurbano</h3>
+        <p>Viaja con comodidad y seguridad entre ciudades.</p>
+        <a href="#">Más Información</a>
+      </div>
+      <div class="service-card">
+        <img src="images/tour_guiados.jpg" alt="Tours Guiados">
+        <h3>Tours Guiados</h3>
+        <p>Explora los mejores destinos turísticos con guías expertos.</p>
+        <a href="#">Más Información</a>
+      </div>
+      <div class="service-card">
+        <img src="images/paqueteria.jpg" alt="Transporte de Paquetería">
+        <h3>Transporte de Paquetería</h3>
+        <p>Envía tus paquetes de forma rápida y segura.</p>
+        <a href="#">Más Información</a>
+      </div>
+    </div>
+  </section>
 
-/* Sección de Reservas */
-.reservation-section {
-  background-color: #004aad;
-  color: white;
-  padding: 50px;
-}
-form input, form textarea {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border-radius: 5px;
-}
-form button {
-  background-color: #ff5a5f;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-}
+  <!-- Sección de Reservas -->
+  <section id="reservations" class="reservation-section">
+    <h2>Reserva tu Viaje</h2>
+    <form action="#" method="post">
+      <input type="text" placeholder="Tu nombre" required>
+      <input type="email" placeholder="Tu correo electrónico" required>
+      <input type="date" placeholder="Fecha de viaje" required>
+      <textarea placeholder="Comentarios o solicitudes" required></textarea>
+      <button type="submit">Reservar Ahora</button>
+    </form>
+  </section>
 
-/* Testimonios */
-.testimonials-section {
-  background-color: #eeeeee;
-  padding: 50px 20px;
-  text-align: center;
-}
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-.testimonial {
-  background-color: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
+  <!-- Sección de Testimonios -->
+  <section id="testimonials" class="testimonials-section">
+    <h2>Lo que dicen nuestros clientes</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial">
+        <p>"Excelente servicio, siempre puntuales y cómodos. ¡Recomendados!"</p>
+        <strong>- Cliente 1</strong>
+      </div>
+      <div class="testimonial">
+        <p>"Los tours fueron increíbles, muy bien organizados y con guías expertos."</p>
+        <strong>- Cliente 2</strong>
+      </div>
+    </div>
+  </section>
 
-/* Pie de página */
-footer {
-  background-color: #333;
-  color: white;
-  padding: 20px;
-  text-align: center;
-}
-footer ul {
-  list-style: none;
-  padding: 0;
-}
-footer ul li {
-  display: inline-block;
-  margin: 0 10px;
-}
+  <!-- Sección de Contacto -->
+  <section id="contact" class="contact-section">
+    <h2>Contacto</h2>
+    <p>Si tienes alguna pregunta, no dudes en contactarnos.</p>
+    <form action="#">
+      <input type="text" placeholder="Tu nombre" required>
+      <input type="email" placeholder="Tu correo electrónico" required>
+      <textarea placeholder="Tu mensaje" required></textarea>
+      <button type="submit">Enviar Mensaje</button>
+    </form>
+  </section>
 
-/* Botón de WhatsApp */
-.whatsapp-button {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #25d366;
-  border-radius: 50%;
-  padding: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
-}
-.whatsapp-button img {
-  width: 50px;
-  height: 50px;
-}
+  <!-- Pie de página -->
+  <footer>
+    <div class="footer-info">
+      <p>&copy; 2024 Servicio de Transporte | Todos los derechos reservados</p>
+      <ul>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Twitter</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Botón flotante de WhatsApp -->
+  <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-button">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+  </a>
+
+</body>
+</html>
