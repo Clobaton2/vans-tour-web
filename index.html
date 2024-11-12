@@ -5,6 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sección de Servicios</title>
   <style>
+/* Estilos para el botón flotante de WhatsApp */
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+.whatsapp-button img {
+  width: 50px;
+  height: 50px;
+}
+.whatsapp-button:hover {
+  background-color: #128c7e;
+}
+
+
+
+    
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -111,5 +133,14 @@
     </div>
   </section>
 
+  
+<!-- Botón flotante de WhatsApp -->
+<a href="https://wa.me/1234567890" target="_blank" class="whatsapp-button">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+</a>
+
+
+
+  
 </body>
 </html>
